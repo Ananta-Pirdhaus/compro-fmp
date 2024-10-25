@@ -1,0 +1,7 @@
+<svg width="1439" height="103" viewBox="0 0 1439 103" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue background rectangle -->
+  <rect width="1439" height="103" fill="white"/>
+  
+  <!-- White wave path -->
+  <path d="M1440 0H0V102.5C118.333 72.6667 434 23.2 750 64C1066 104.8 1341.67 81 1440 64V0Z" fill="#1E3A8A"/>
+</svg>

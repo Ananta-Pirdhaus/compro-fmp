@@ -1,0 +1,37 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Tambahkan ini di file CSS global Anda */
+@keyframes chatAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.chat-appear {
+  animation: chatAppear 0.3s ease-out;
+}
+
+.chat-disappear {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0.5) translate(10px, 10px); /* Sesuaikan sesuai dengan posisi ikon */
+  opacity: 0;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px #10b981, 0 0 25px #3b82f6, 0 0 5px #3b82f6;
+}
