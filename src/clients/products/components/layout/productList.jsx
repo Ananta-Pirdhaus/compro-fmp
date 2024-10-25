@@ -45,7 +45,7 @@ export default function ProductList() {
                   {products.description}
                 </p>
                 {/* Button placed here, below the description */}
-                <button className="mt-4 w-1/2 md:w-full sm:w-full lg:w-1/2 border-gray-900 border bg-white text-gray-800 py-2 px-4 rounded transition duration-200 hover:bg-blue-800 active:bg-blue-800">
+                <button className="mt-4 w-1/2 md:w-full sm:w-full lg:w-1/2 border-gray-900 border bg-white text-gray-800 py-2 px-4 rounded transition duration-200 hover:bg-blue-800 hover:text-white active:bg-blue-800 active:text-white">
                   Book Now
                 </button>
               </div>
