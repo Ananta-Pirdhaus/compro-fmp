@@ -1,10 +1,10 @@
 import React from "react";
-import ProductPage from "./pages/about-page";
+import ProductPages from "./pages/product-page";
 
 export default function Index() {
   return (
     <React.Fragment>
-      <ProductPage />
+      <ProductPages />
     </React.Fragment>
   );
 }

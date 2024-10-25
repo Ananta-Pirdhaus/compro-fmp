@@ -16,27 +16,77 @@ export default function Navbar() {
   };
 
   const renderNavLinks = () => {
-    const navItems = [
-      { path: "/", name: "Beranda", key: "home" },
-      { path: "/about-us", name: "About Us", key: "about-us" },
-      { path: "/services", name: "Services", key: "services" },
-      { path: "/insight", name: "Insights", key: "insight" },
-    ];
-
-    return navItems.map((item) => (
-      <li key={item.key}>
-        <NavLink
-          to={item.path}
-          className={`font-semibold${
-            activeNavbar === item.key ? "bg-danger" : ""
-          }`}
-          onClick={() => handleNavbarClick(item.key)}
-        >
-          {item.name}
-        </NavLink>
-      </li>
-    ));
+    return (
+      <>
+        <li>
+          <NavLink
+            to="/"
+            className={`font-semibold ${
+              activeNavbar === "home" ? "bg-danger" : ""
+            }`}
+            onClick={() => handleNavbarClick("home")}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/about-us"
+            className={`font-semibold ${
+              activeNavbar === "about-us" ? "bg-danger" : ""
+            }`}
+            onClick={() => handleNavbarClick("about-us")}
+          >
+            About Us
+          </NavLink>
+        </li>
+        {/* Dropdown untuk "Services" */}
+        <div className="dropdown dropdown-end">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost font-semibold"
+            onClick={() => handleNavbarClick("services")}
+          >
+            Services
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow"
+          >
+            <li>
+              <NavLink
+                to="/services"
+                onClick={() => handleNavbarClick("services")}
+              >
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/product"
+                onClick={() => handleNavbarClick("product")}
+              >
+                Products
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+        <li>
+          <NavLink
+            to="/insight"
+            className={`font-semibold ${
+              activeNavbar === "insight" ? "bg-danger" : ""
+            }`}
+            onClick={() => handleNavbarClick("insight")}
+          >
+            Insights
+          </NavLink>
+        </li>
+      </>
+    );
   };
+
 
   return (
     <React.Fragment>
@@ -51,7 +101,7 @@ export default function Navbar() {
             <img
               src={logoLarge}
               alt="Logo Large"
-              className="hidden md:w-32 md:h-32 md:block lg:block  lg:w-40 lg:h-16"
+              className="hidden md:w-32 md:h-32 md:block lg:block lg:w-40 lg:h-16"
               loading="lazy"
             />
             {/* Logo untuk tampilan mobile */}
@@ -64,7 +114,7 @@ export default function Navbar() {
           </div>
         </NavLink>
 
-        <ul className="menu menu-horizontal top-0  hidden lg:flex items-center space-x-4 ">
+        <ul className="menu menu-horizontal top-0 hidden lg:flex items-center space-x-4">
           {renderNavLinks()}
         </ul>
 
@@ -106,7 +156,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden lg:flex ">
+        <div className="hidden lg:flex">
           <button className="btn bg-blue-900 hover:bg-blue-950 text-base-100 rounded-full">
             <span className="text-white">Contact Us</span>
           </button>
