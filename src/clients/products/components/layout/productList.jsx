@@ -12,7 +12,7 @@ export default function ProductList() {
 
   const productTab = product.map((products) => ({
     icon: <FaMapSigns className="text-4xl" />,
-    title: products.title,
+    title: products.productName,
     description: products.description,
     gambar: products.image,
   }));

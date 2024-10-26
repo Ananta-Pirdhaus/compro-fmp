@@ -1,102 +1,107 @@
 import React from "react";
 import logoMiniResponsive from "./assets/images/Logo_FMP_Responsive.png";
+import Product from "../common/assets/data/dummyProduct";
+import Services from "../common/assets/data/dummyServices";
 import logoLarge from "./assets/images/Logo_FMP_large.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
     <React.Fragment>
       <footer className="footer p-10 bg-white text-base-content mt-5">
-        <nav className="mb-4">
-          {/* Logo for small and medium screens */}
+        {/* Logo Section */}
+        <div className="mb-6 text-center lg:text-left">
           <img
             src={logoMiniResponsive}
             alt="Logo AdiHutama Responsive"
-            className="w-40 h-auto block lg:hidden"
+            className="w-32 h-auto mx-auto lg:hidden"
             loading="lazy"
           />
-          {/* Logo for large screens */}
           <img
             src={logoLarge}
             alt="Logo AdiHutama Large"
             className="w-40 h-auto hidden lg:block"
             loading="lazy"
           />
-        </nav>
-        <nav>
-          <h3 className="footer-title text-gray-700 font-semibold">Layanan</h3>{" "}
-          {/* Changed from h6 to h3 */}
-          <ul>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Paket Family Trip
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Paket Outing Kantor
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Paket Family Gathering
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Paket Customer Gathering
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav>
-          <h3 className="footer-title text-gray-700 font-semibold">
-            Perusahaan
-          </h3>{" "}
-          {/* Changed from h6 to h3 */}
-          <ul>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Tentang Kami
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Hubungi Kami
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Karir
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Media Kit
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav>
-          <h3 className="footer-title text-gray-800 font-semibold">Legal</h3>{" "}
-          {/* Changed from h6 to h3 */}
-          <ul>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Syarat dan Ketentuan
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Kebijakan Privasi
-              </a>
-            </li>
-            <li className="mb-2">
-              <a className="link link-hover" href="#">
-                Kebijakan Cookie
-              </a>
-            </li>
-          </ul>
-        </nav>
+        </div>
+
+        {/* Grid Layout for Content Sections */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center lg:text-left">
+          {/* Services Section */}
+          <nav>
+            <h3 className="footer-title text-gray-700 font-semibold mb-3">
+              Our Services
+            </h3>
+            <ul>
+              {Services.map((service, index) => (
+                <li key={index} className="mb-2">
+                  <a className="link link-hover text-gray-600" href="#">
+                    {service.serviceName}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Products Section */}
+          <nav>
+            <h3 className="footer-title text-gray-700 font-semibold mb-3">
+              Our Product
+            </h3>
+            <ul>
+              {Product.map((product, index) => (
+                <li key={index} className="mb-2">
+                  <a className="link link-hover text-gray-600" href="#">
+                    {product.productName}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Contact Section */}
+          <nav>
+            <h3 className="footer-title text-gray-800 font-semibold mb-3">
+              Contact
+            </h3>
+            <ul>
+              <li className="mb-4 flex items-center justify-center lg:justify-start">
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  className="mr-2 text-gray-700"
+                />
+                <span className="text-gray-600">+6285819422449</span>
+              </li>
+              <li className="mb-4 flex items-center justify-center lg:justify-start">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="mr-2 text-gray-700"
+                />
+                <span className="text-gray-600">
+                  fahrulmonetaparessa@gmail.com
+                </span>
+              </li>
+              <li className="flex items-start justify-center lg:justify-start">
+                <FontAwesomeIcon
+                  icon={faMapMarkerAlt}
+                  className="mr-2 text-gray-700"
+                />
+                <span className="text-gray-600 whitespace-break-spaces">
+                  Jl. Daan Mogot II No.Kav. 4-5, RT.10/RW.1, Kedoya Utara, Kec.
+                  Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta
+                  11520
+                  <br />
+                  Centro City Residence
+                </span>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </footer>
     </React.Fragment>
   );

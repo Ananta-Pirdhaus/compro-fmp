@@ -3,168 +3,109 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const ContactSection = () => {
   return (
-    <section className="text-gray-600 body-font bg-orange-100">
-      <div
-        className="container flex gap-5 flex-col p-5 md:flex-row-reverse lg:max-w-5xl w-full px-5 py-12 md:py-24 mx-auto section"
-        id="contact-form"
-      >
-        <div className="md:w-1/3 w-full bg-white p-5">
-          <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">
-            Contact Us
-          </h1>
-
-          {/* Icons for Phone, Email, and Maps */}
-          <div className="flex items-center mb-4">
-            <a
-              href="tel:+1234567890"
-              className="mr-4 text-gray-500 hover:text-gray-900"
-            >
-              <i className="fas fa-phone-alt fa-lg"></i>
-            </a>
-            <a
-              href="mailto:contact@example.com"
-              className="mr-4 text-gray-500 hover:text-gray-900"
-            >
-              <i className="fas fa-envelope fa-lg"></i>
-            </a>
-            <a
-              href="https://www.google.com/maps"
-              className="text-gray-500 hover:text-gray-900"
-            >
-              <i className="fas fa-map-marker-alt fa-lg"></i>
-            </a>
-          </div>
-
-          <p className="leading-relaxed text-xl text-gray-900">
-            We're here to assist you! If you have any questions or need
-            assistance, please feel free to reach out to us.
-            <br />
-            <br />
-            You can also email us at
-            <a
-              href="mailto:contact@example.com"
-              className="font-semibold border-b-4 border-green-400"
-            >
-              contact@example.com
-            </a>
-          </p>
-
-          <p className="leading-relaxed text-xl text-gray-900 mt-8">
-            Connect with us on social media:
-          </p>
-
-          {/* Social Media Cards */}
-          <div className="grid grid-cols-4 gap-4 mt-6">
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="border  bg-blue-700 text-white rounded-2xl p-4 text-center hover:bg-gray-100">
-                <i className="fab fa-linkedin fa-lg mx-auto"></i>
-              </div>
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="border  bg-blue-700 text-white rounded-2xl p-4 text-center hover:bg-gray-100">
-                <i className="fab fa-instagram fa-lg mx-auto"></i>
-              </div>
-            </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="border  bg-blue-700 text-white rounded-2xl p-4 text-center hover:bg-gray-100">
-                <i className="fab fa-facebook fa-lg mx-auto"></i>
-              </div>
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="border  bg-blue-700 text-white rounded-2xl p-4 text-center hover:bg-gray-100">
-                <i className="fab fa-twitter fa-lg mx-auto"></i>
-              </div>
-            </a>
-          </div>
+    <>
+      {/* Header Section */}
+      <section className="bg-blue-900 text-white py-16">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-red-500">Contact Us</h2>
         </div>
+      </section>
 
-        <div className="md:w-2/3 w-full mt-10 md:mt-0 md:p-5 bg-white">
-          <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">
-            Contact Form
-          </h1>
-          <form
-            action="send-contact.php"
-            method="post"
-            id="submit-contact-form"
-          >
-            <div className="p-2 w-full">
-              <div className="relative">
-                <label
-                  htmlFor="name"
-                  className="leading-7 py-4 text-lg text-gray-900"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
+      {/* Contact Form Section */}
+      <section className="bg-orange-50 py-12 px-4">
+        <div className="container mx-auto flex flex-col md:flex-row items-stretch justify-center space-y-8 md:space-y-0 md:space-x-8">
+          {/* Form Area */}
+          <div className="w-full md:w-1/2 bg-white rounded shadow-lg p-8 flex flex-col">
+            <div className="text-center">
+              <h3 className="text-orange-500 text-xl font-bold mb-2">
+                \ Get In Touch \
+              </h3>
+              <h1 className="text-3xl font-bold text-blue-900 mb-6">
+                Hey! Let's Talk
+              </h1>
             </div>
-            <div className="p-2 w-full">
-              <div className="relative">
-                <label
-                  htmlFor="email"
-                  className="leading-7 py-4 text-lg text-gray-900"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div className="p-2 w-full">
-              <div className="relative">
-                <label
-                  htmlFor="message"
-                  className="leading-7 py-4 text-lg text-gray-900"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  className="w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                ></textarea>
-              </div>
-            </div>
-            <div className="p-2 w-full">
+            
+            <form className="space-y-4 flex-grow">
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="text"
+                placeholder="Phone"
+                className="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <textarea
+                placeholder="Your Message"
+                className="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
               <button
                 type="submit"
-                className="flex text-white bg-gray-900 border-0 py-4 px-6 focus:outline-none hover:bg-blue-900 rounded text-xl font-bold shadow-lg mx-0 flex-col text-center g-recaptcha"
+                className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700"
               >
-                Send Message ✉
+                Send Now
               </button>
+            </form>
+          </div>
+
+          {/* Contact Information */}
+          <div className="w-full md:w-1/3 bg-white rounded shadow-lg p-8 flex flex-col justify-between">
+            <div>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-blue-900 flex items-center mb-2">
+                  <i className="fas fa-phone-alt text-blue-500 mr-3"></i> Call
+                  Anytime
+                </h3>
+                <p className="text-gray-600">+62 858 1942 2449</p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-blue-900 flex items-center mb-2">
+                  <i className="fas fa-envelope text-blue-500 mr-3"></i> Send
+                  Email
+                </h3>
+                <p className="text-gray-600">fahrulmonetaparessa@gmail.com</p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-blue-900 flex items-center mb-2">
+                  <i className="fas fa-map-marker-alt text-blue-500 mr-3"></i>{" "}
+                  Visit Us
+                </h3>
+                <p className="text-gray-600">
+                  JL Daan Mogot II No. Kav. 4-5 Kedoya Utara, Jakarta Barat
+                </p>
+              </div>
             </div>
-          </form>
+
+            {/* Social Media Icons */}
+            <div>
+              <h3 className="text-lg font-semibold text-blue-900 mb-4">
+                Follow us
+              </h3>
+              <div className="flex space-x-4">
+                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                  <i className="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

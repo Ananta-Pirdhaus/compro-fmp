@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logoMiniResponsive from "./assets/images/Logo_FMP_Responsive.png";
 import logoLarge from "./assets/images/Logo_FMP_large.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const isNavigate = useNavigate();
+
+  const handleContactRedirect = () => {
+    isNavigate("/contact-us");
+  };
 
   const handleNavbarClick = (navbarName) => {
     setActiveNavbar(navbarName);
@@ -87,7 +93,6 @@ export default function Navbar() {
     );
   };
 
-
   return (
     <React.Fragment>
       <div className="sticky top-0 z-50 bg-base-100 flex items-center justify-between px-4 h-20">
@@ -148,7 +153,10 @@ export default function Navbar() {
             >
               {renderNavLinks()}
               <li>
-                <button className="bg-blue-900 text-base-100 w-full mt-2 rounded-full">
+                <button
+                  className="bg-blue-900 text-base-100 w-full mt-2 rounded-full"
+                  onClick={handleContactRedirect}
+                >
                   <span className="text-white">Contact Us</span>
                 </button>
               </li>
@@ -157,7 +165,10 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex">
-          <button className="btn bg-blue-900 hover:bg-blue-950 text-base-100 rounded-full">
+          <button
+            className="btn bg-blue-900 hover:bg-blue-950 text-base-100 rounded-full"
+            onClick={handleContactRedirect}
+          >
             <span className="text-white">Contact Us</span>
           </button>
         </div>
