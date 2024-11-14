@@ -8,8 +8,9 @@ const AboutPage = lazy(() => import("./clients/about"));
 const ServicePage = lazy(() => import("./clients/services"));
 const ProductPage = lazy(() => import("./clients/products"));
 const ContactPage = lazy(() => import("./clients/contact"));
-const DetailPaket = lazy(() => import("./clients/detail-product"));
+const DetailProduct = lazy(() => import("./clients/detail-product"));
 const DetailAbout = lazy(() => import("./clients/about-detail"));
+const BlogPage = lazy(() => import("./clients/blog"));
 
 export default function App() {
   return (
@@ -22,8 +23,9 @@ export default function App() {
           <Route path="/product" element={<ProductPage />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="/contact-us" element={<ContactPage />} />
-          <Route path="/product/:slug" element={<DetailPaket />} />
+          <Route path="/product/:slug" element={<DetailProduct />} />
           <Route path="/about-us/:slug" element={<DetailAbout />} />
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
       </Router>
     </React.Fragment>

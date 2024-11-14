@@ -80,13 +80,13 @@ export default function Navbar() {
         </div>
         <li>
           <NavLink
-            to="/insight"
+            to="/blog"
             className={`font-semibold ${
-              activeNavbar === "insight" ? "bg-danger" : ""
+              activeNavbar === "blog" ? "bg-danger" : ""
             }`}
-            onClick={() => handleNavbarClick("insight")}
+            onClick={() => handleNavbarClick("blog")}
           >
-            Insights
+            Blog
           </NavLink>
         </li>
       </>
