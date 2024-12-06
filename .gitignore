@@ -43,3 +43,7 @@ dist-ssr
 
 # React build output
 build
+
+# Ignore package lock files
+package-lock.json
+yarn.lock
