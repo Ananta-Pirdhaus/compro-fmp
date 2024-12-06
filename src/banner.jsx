@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logoMiniResponsive from "./common/assets/images/logo-transparent.png";
+import logoMiniResponsive from "./common/assets/images/Logo_FMP_Responsive.png";
 import { FaWhatsapp } from "react-icons/fa";
 
 function Banner() {
@@ -47,14 +47,14 @@ function Banner() {
           }`}
         >
           <div className="bg-white shadow-md rounded-lg max-w-lg w-full">
-            <div className="p-4 border-b bg-green-500 text-white rounded-t-lg flex items-center">
+            <div className="p-4 border-b bg-blue-500 text-white rounded-t-lg flex items-center">
               <img
                 src={logoMiniResponsive}
                 alt="Logo"
                 className="w-12 h-12 md:w-16 md:h-16 lg:w-16 lg:h-16 mr-3 bg-white rounded-lg"
               />
               <p className="text-sm md:text-lg font-semibold flex-grow">
-                Adihutama Travel
+                Fahrul Moneta Pressa
               </p>
               <button
                 id="close-chat"
@@ -81,7 +81,7 @@ function Banner() {
             {/* Chat */}
             <div className="p-5">
               <a
-                href="https://wa.me/+6282122050805" // Replace with your WhatsApp number
+                href="https://wa.me/+6285819422449" // Replace with your WhatsApp number
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
@@ -94,7 +94,7 @@ function Banner() {
                   </div>
                   <div className="chat-bubble bg-blue-500 hover:bg-blue-700 text-white">
                     <p className="font-semibold">Admin 1</p>
-                    <p className="text-sm">+6282122050805</p>
+                    <p className="text-sm">+62 858-1942-2449</p>
                   </div>
                 </div>
               </a>

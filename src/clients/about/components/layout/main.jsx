@@ -1,54 +1,20 @@
 import React from "react";
 import NewsLetter from "../../../../common/email";
+import CEO from "../../../../common/assets/images/team/CEO.jpg";
 
 const teamMembers = [
   {
     id: 1,
-    name: "John Doe",
-    role: "Software Engineer",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/1.jpg",
+    name: "Muh. Fahrul, B. Sc",
+    role: "CEO",
+    imgSrc: CEO,
   },
   {
     id: 2,
-    name: "Jane Smith",
-    role: "Graphic Designer",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/4.jpg",
-  },
-  {
-    id: 3,
-    name: "Alex Johnson",
-    role: "Marketing Manager",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/3.jpg",
-  },
-  {
-    id: 4,
-    name: "Peter Johnson",
-    role: "SEO Specialist",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/2.jpg",
-  },
-  {
-    id: 5,
-    name: "Emily Brown",
-    role: "UX Designer",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/5.jpg",
-  },
-  {
-    id: 6,
-    name: "Michael Davis",
-    role: "Frontend Developer",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/6.jpg",
-  },
-  {
-    id: 7,
-    name: "Sarah Johnson",
-    role: "Content Writer",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/7.jpg",
-  },
-  {
-    id: 8,
-    name: "David Wilson",
-    role: "Project Manager",
-    imgSrc: "https://spacema-dev.com/elevate/assets/images/team/8.jpg",
+    name: "Jonathan Benedict",
+    role: "COO",
+    imgSrc:
+      "https://th.bing.com/th/id/OIP.NfNA47Z2MfhgX6RWIUtqKgHaHa?rs=1&pid=ImgDetMain",
   },
 ];
 
@@ -60,7 +26,7 @@ const OurTeam = () => {
           Meet Our Team
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
           {teamMembers.map((member) => (
             <div
               key={member.id}
@@ -87,11 +53,9 @@ export default function HomeHero() {
       <div className="container px-6 py-16 mx-auto text-justify">
         <div className="w-full mx-auto overflow-hidden bg-blue-700 p-5 rounded-xl">
           <h1 className="text-xl font-normal text-white lg:text-2xl">
-            PT. Fahrul Monetta Paresa stands at the forefront of the IT
-            consulting and business development industry in Indonesia, driven by
-            a passion to provide transformational solutions to our clients.
-            Since its inception, we have been dedicated to leveraging the power
-            of technology to drive business growth, enabling organizations
+            PT. Fahrul Monetta Paresa is at the forefront of the IT consulting
+            and business development industry in Indonesia. Driven by a passion
+            to create transformational solutions, we have empowered businesses
             across various sectors to thrive in the digital age.
           </h1>
         </div>
@@ -117,7 +81,6 @@ export default function HomeHero() {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-              
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -129,12 +92,11 @@ export default function HomeHero() {
             <div className="flex-1">
               <h5 className="mb-3 text-xl font-bold lg:text-2xl">Our Vision</h5>
               <p className="mb-6 text-lg text-gray-600">
-                Becoming the leading partner in digital transformation and
-                business development for companies in Indonesia and globally,
-                while creating sustainable value through technological
+                To become the leading partner in digital transformation and
+                business development for companies both in Indonesia and
+                globally, while creating sustainable value through technological
                 innovation.
               </p>
-              
             </div>
           </a>
           <a

@@ -4,31 +4,33 @@ const BlogSection = () => {
   return (
     <section className="bg-white text-gray-800">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-        <h2 className="text-3xl font-semibold text-center">New Posts</h2>
+        <h2 className="text-3xl font-semibold text-center">New Tech Posts</h2>
         <a
           rel="noopener noreferrer"
           href="#"
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-100"
         >
           <img
-            src="https://source.unsplash.com/random/480x360"
-            alt=""
+            src="https://th.bing.com/th/id/OIP._YmQQSVtIhRaZm9X3FAFuQHaEL?w=885&h=500&rs=1&pid=ImgDetMain"
+            alt="Tech Post"
             className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 bg-gray-200"
           />
           <div className="p-6 space-y-2 lg:col-span-5">
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
-              Noster tincidunt reprimique ad pro
+              Emerging Technologies in 2024
             </h3>
-            <span className="text-xs text-gray-500">February 19, 2021</span>
+            <span className="text-xs text-gray-500">December 6, 2024</span>
             <p>
-              Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in
-              graece fuisset, eos affert putent doctus id.
+              Stay ahead of the curve with insights into the latest advancements
+              in AI, blockchain, and quantum computing.
             </p>
           </div>
         </a>
-        <h2 className="text-3xl font-semibold text-center">Latest Posts</h2>
+        <h2 className="text-3xl font-semibold text-center">
+          Latest Tech Posts
+        </h2>
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3, 4, 5, 6].map((index) => (
+          {[1, 2, 3, 4, 5, 6, 7].map((index) => (
             <a
               key={index}
               rel="noopener noreferrer"
@@ -38,20 +40,19 @@ const BlogSection = () => {
               <img
                 role="presentation"
                 className="object-cover w-full rounded h-44 bg-gray-200"
-                src={`https://source.unsplash.com/random/480x360?${index}`}
+                src={`https://th.bing.com/th/id/OIP._YmQQSVtIhRaZm9X3FAFuQHaEL?w=885&h=500&rs=1&pid=ImgDetMain`}
+                alt={`Tech Post ${index}`}
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  In usu laoreet repudiare legendos
+                  The Future of Smart Cities
                 </h3>
                 <span className="text-xs text-gray-500">
-                  January {20 + index}, 2021
+                  December {5 + index}, 2024
                 </span>
                 <p>
-                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                  neglegentur, ex has tantas percipit perfecto. At per tempor
-                  albucius perfecto, ei probatus consulatu patrioque mea, ei
-                  vocent delicata indoctum pri.
+                  Discover how technology is transforming urban spaces with IoT
+                  and AI to make cities smarter and more efficient.
                 </p>
               </div>
             </a>

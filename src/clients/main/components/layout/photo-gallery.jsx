@@ -49,12 +49,12 @@ const ImageGallery = () => {
                     <h6 className="text-lg font-medium text-gray-700">
                       Ravi Kumar
                     </h6>
-                    <p className="text-sm text-gray-500">Car Enthusiast</p>
+                    <p className="text-sm text-gray-500">Software Engineer</p>
                   </div>
                   <p className="mt-4 md:mt-6 lg:mt-8">
-                    The quality of these seat covers is outstanding. They fit
-                    perfectly and add a touch of luxury to my car's interior.
-                    Highly recommend!
+                    The integration of this technology into our system was
+                    seamless. The performance boost has been impressive, and the
+                    user experience is much smoother.
                   </p>
                 </div>
               </div>
@@ -83,14 +83,12 @@ const ImageGallery = () => {
                     <h6 className="text-lg font-medium text-gray-700">
                       Anjali Sharma
                     </h6>
-                    <p className="text-sm text-gray-500">
-                      Marketing Professional
-                    </p>
+                    <p className="text-sm text-gray-500">Data Scientist</p>
                   </div>
                   <p className="mt-4 md:mt-6 lg:mt-8">
-                    I love the customizable designs! I was able to choose the
-                    perfect color to match my car's interior. The material feels
-                    very durable.
+                    I am really impressed with the new features. The AI
+                    capabilities have enhanced our product offering, and it's
+                    made our data analysis faster and more accurate.
                   </p>
                 </div>
               </div>
@@ -119,12 +117,14 @@ const ImageGallery = () => {
                     <h6 className="text-lg font-medium text-gray-700">
                       Vijay Singh
                     </h6>
-                    <p className="text-sm text-gray-500">Software Developer</p>
+                    <p className="text-sm text-gray-500">
+                      Full Stack Developer
+                    </p>
                   </div>
                   <p className="mt-4 md:mt-6 lg:mt-8">
-                    These seat covers are a game-changer for long drives. The
-                    added padding and ergonomic design make a huge difference in
-                    comfort.
+                    The cloud infrastructure we've built has significantly
+                    improved our system's scalability. The solutions provided
+                    have made our deployment processes so much easier.
                   </p>
                 </div>
               </div>
@@ -153,11 +153,14 @@ const ImageGallery = () => {
                     <h6 className="text-lg font-medium text-gray-700">
                       Priya Patel
                     </h6>
-                    <p className="text-sm text-gray-500">Mobile Developer</p>
+                    <p className="text-sm text-gray-500">
+                      Mobile App Developer
+                    </p>
                   </div>
                   <p className="mt-4 md:mt-6 lg:mt-8">
-                    The installation was super easy, and the instructions were
-                    clear. My car looks and feels much more upscale now.
+                    The tools and frameworks I have used in the app development
+                    process have simplified coding and reduced bugs. I'm
+                    thrilled with the results and can't wait to scale up.
                   </p>
                 </div>
               </div>
@@ -186,12 +189,12 @@ const ImageGallery = () => {
                     <h6 className="text-lg font-medium text-gray-700">
                       Arjun Mehta
                     </h6>
-                    <p className="text-sm text-gray-500">Manager</p>
+                    <p className="text-sm text-gray-500">Product Manager</p>
                   </div>
                   <p className="mt-4 md:mt-6 lg:mt-8">
-                    Great value for money. The seat covers have a premium feel
-                    and have significantly improved the look of my car's
-                    interior.
+                    The product's integration with IoT devices has been a game
+                    changer. It's now easier than ever to track data and
+                    automate processes within the system.
                   </p>
                 </div>
               </div>
@@ -220,17 +223,18 @@ const ImageGallery = () => {
                     <h6 className="text-lg font-medium text-gray-700">
                       Meera Gupta
                     </h6>
-                    <p className="text-sm text-gray-500">Product Designer</p>
+                    <p className="text-sm text-gray-500">UX/UI Designer</p>
                   </div>
                   <p className="mt-4 md:mt-6 lg:mt-8">
-                    I'm very impressed with the fit and finish. The covers are
-                    comfortable and add a touch of class to my car.
+                    The design has completely transformed the user journey. The
+                    app is intuitive, and the user feedback has been
+                    overwhelmingly positive. Excited to see how it evolves!
                   </p>
                 </div>
               </div>
               <div className="mt-4 md:mt-6 lg:mt-8 flex justify-end">
                 <a
-                  href="https://www.linkedin.com/posts/meera-gupta"
+                  href="https://www.linkedin.com/in/meera-gupta"
                   className="text-blue-500 hover:text-blue-600"
                 >
                   <i className="fab fa-linkedin"></i>
