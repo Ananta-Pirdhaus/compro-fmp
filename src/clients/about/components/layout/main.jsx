@@ -6,13 +6,13 @@ const teamMembers = [
   {
     id: 1,
     name: "Muh. Fahrul, B. Sc",
-    role: "CEO",
+    role: "Director",
     imgSrc: CEO,
   },
   {
     id: 2,
     name: "Jonathan Benedict",
-    role: "COO",
+    role: "Operational Manager",
     imgSrc:
       "https://th.bing.com/th/id/OIP.NfNA47Z2MfhgX6RWIUtqKgHaHa?rs=1&pid=ImgDetMain",
   },
@@ -38,7 +38,7 @@ const OurTeam = () => {
                 className="w-full rounded-full mb-4"
               />
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-gray-700">Role: {member.role}</p>
+              <p className="text-gray-700">{member.role}</p>
             </div>
           ))}
         </div>
@@ -71,7 +71,7 @@ export default function HomeHero() {
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12 p-6 md:p-10 mt-12">
           <a
             href="#"
-            className="flex flex-col p-6 space-y-6 transition-all duration-500 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6"
+            className="flex flex-col p-6 space-y-6 transition-shadow duration-300 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6"
           >
             <div className="flex items-center justify-center w-16 h-16 bg-blue-100 border border-blue-200 rounded-full shadow-inner lg:h-20 lg:w-20">
               <svg
@@ -101,7 +101,7 @@ export default function HomeHero() {
           </a>
           <a
             href="#"
-            className="flex flex-col p-6 space-y-6 transition-all duration-500 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6"
+            className="flex flex-col p-6 space-y-6 transition-shadow duration-300 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6"
           >
             <div className="flex items-center justify-center w-16 h-16 bg-blue-100 border border-blue-100 rounded-full shadow-inner lg:h-20 lg:w-20">
               <svg
