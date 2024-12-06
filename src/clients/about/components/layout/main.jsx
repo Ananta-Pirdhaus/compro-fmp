@@ -6,13 +6,13 @@ const teamMembers = [
   {
     id: 1,
     name: "Muh. Fahrul, B. Sc",
-    role: "CEO",
+    role: "Director",
     imgSrc: CEO,
   },
   {
     id: 2,
     name: "Jonathan Benedict",
-    role: "COO",
+    role: "Operational Manager",
     imgSrc:
       "https://th.bing.com/th/id/OIP.NfNA47Z2MfhgX6RWIUtqKgHaHa?rs=1&pid=ImgDetMain",
   },
@@ -38,7 +38,7 @@ const OurTeam = () => {
                 className="w-full rounded-full mb-4"
               />
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-gray-700">Role: {member.role}</p>
+              <p className="text-gray-700">{member.role}</p>
             </div>
           ))}
         </div>
