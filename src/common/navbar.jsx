@@ -8,6 +8,7 @@ export default function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const isNavigate = useNavigate();
+  const [isOpenOfferings, setIsOpenOfferings] = useState(false);
 
   const handleContactRedirect = () => {
     isNavigate("/contact-us");
@@ -19,6 +20,13 @@ export default function Navbar() {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+    setIsOpenOfferings(false);
+  };
+
+  const handleOpenOfferingsClick = (e) => {
+    e.stopPropagation();
+    handleNavbarClick("offerings");
+    setIsOpenOfferings(!isOpenOfferings);
   };
 
   const renderNavLinks = () => {
@@ -46,37 +54,39 @@ export default function Navbar() {
             About Us
           </NavLink>
         </li>
-        {/* Dropdown untuk "Services" */}
+        {/* Dropdown untuk "Offerings" */}
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost font-semibold"
-            onClick={() => handleNavbarClick("services")}
+            className={`font-semibold btn btn-ghost`}
+            onClick={handleOpenOfferingsClick}
           >
-            Services
+            Offerings
           </div>
-          <ul
-            tabIndex={0}
-            className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow"
-          >
-            <li>
-              <NavLink
-                to="/services"
-                onClick={() => handleNavbarClick("services")}
-              >
-                Services
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/product"
-                onClick={() => handleNavbarClick("product")}
-              >
-                Products
-              </NavLink>
-            </li>
-          </ul>
+          {isOpenOfferings && (
+            <ul
+              tabIndex={0}
+              className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow"
+            >
+              <li>
+                <NavLink
+                  to="/services"
+                  onClick={() => handleNavbarClick("services")}
+                >
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/product"
+                  onClick={() => handleNavbarClick("product")}
+                >
+                  Products
+                </NavLink>
+              </li>
+            </ul>
+          )}
         </div>
         <li>
           <NavLink
@@ -95,7 +105,8 @@ export default function Navbar() {
 
   return (
     <React.Fragment>
-      <div className="sticky top-0 z-50 bg-base-100 flex items-center justify-between px-4 h-20">
+      <div className="sticky top-0 z-50 flex items-center justify-between h-20 px-4 bg-base-100">
+        {/* Logo Company */}
         <NavLink
           to="/"
           className="font-bold text-green-400"
@@ -106,23 +117,25 @@ export default function Navbar() {
             <img
               src={logoLarge}
               alt="Logo Large"
-              className="hidden md:w-32 md:h-32 md:block lg:block lg:w-40 lg:h-16"
+              className="hidden h-auto md:block lg:block md:w-80"
               loading="lazy"
             />
             {/* Logo untuk tampilan mobile */}
             <img
               src={logoMiniResponsive}
               alt="Logo Mini Responsive"
-              className="block md:hidden h-16 w-24"
+              className="block w-24 h-16 md:hidden"
               loading="lazy"
             />
           </div>
         </NavLink>
 
-        <ul className="menu menu-horizontal top-0 hidden lg:flex items-center space-x-4">
+        {/* List Desktop */}
+        <ul className="top-0 items-center hidden space-x-4 menu menu-horizontal lg:flex">
           {renderNavLinks()}
         </ul>
 
+        {/* List Mobile */}
         <div className="lg:hidden">
           <div className="dropdown">
             <button
@@ -132,7 +145,7 @@ export default function Navbar() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -154,7 +167,7 @@ export default function Navbar() {
               {renderNavLinks()}
               <li>
                 <button
-                  className="bg-blue-900 text-base-100 w-full mt-2 rounded-full"
+                  className="w-full mt-2 bg-blue-900 rounded-full text-base-100"
                   onClick={handleContactRedirect}
                 >
                   <span className="text-white">Contact Us</span>
@@ -164,9 +177,10 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Contact Us Desktop */}
         <div className="hidden lg:flex">
           <button
-            className="btn bg-blue-900 hover:bg-blue-950 text-base-100 rounded-full"
+            className="px-10 bg-blue-900 rounded-full btn hover:bg-blue-950 text-base-100"
             onClick={handleContactRedirect}
           >
             <span className="text-white">Contact Us</span>
