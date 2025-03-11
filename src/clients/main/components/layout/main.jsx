@@ -17,12 +17,12 @@ export default function HomeHero() {
       <HeroSections />
 
       {/* About adiHutama Section */}
-      <section className="hero bg-white py-16 px-4 sm:px-8">
-        <div className="hero-content flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto">
+      <section className="px-4 py-16 bg-white hero sm:px-8">
+        <div className="flex flex-col items-center justify-center mx-auto hero-content lg:flex-row max-w-7xl">
           {/* Skeleton Loader */}
           {!imageLoaded && (
-            <div className="skeleton w-full max-w-xs lg:max-w-sm rounded-lg shadow-2xl mb-8 lg:mb-0 lg:mr-16">
-              <div className="animate-pulse bg-gray-300 h-48 lg:h-64 rounded-lg" />
+            <div className="w-full max-w-xs mb-8 rounded-lg shadow-2xl skeleton lg:max-w-sm lg:mb-0 lg:mr-16">
+              <div className="h-48 bg-gray-300 rounded-lg animate-pulse lg:h-64" />
             </div>
           )}
           {/* Actual Image */}
@@ -36,10 +36,10 @@ export default function HomeHero() {
             loading="lazy" // Lazy load the logo image
           />
           <div className="text-center lg:text-left">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-blue-700">
+            <h2 className="mb-4 text-4xl font-bold text-blue-700 sm:text-5xl">
               We Develope Product That People Love to Use.
             </h2>
-            <p className="text-lg sm:text-xl text-justify max-w-2xl">
+            <p className="max-w-2xl text-lg text-justify sm:text-xl">
               PT. Fahrul Monetta Paresa stands at the forefront of the IT
               consulting and business development industry in Indonesia, driven
               by a passion to provide transformational solutions to our clients.
@@ -47,10 +47,10 @@ export default function HomeHero() {
               power of technology to drive business growth, enabling
               organizations across various sectors to thrive in the digital age.
             </p>
-            <div className="flex py-5">
+            <div className="flex justify-center py-5 lg:justify-normal">
               <a
                 href="#"
-                className="bg-blue-700 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-800 transition duration-300 text-center"
+                className="px-8 py-3 font-semibold text-center text-white transition duration-300 bg-blue-700 rounded-full hover:bg-blue-900"
               >
                 View More
               </a>
