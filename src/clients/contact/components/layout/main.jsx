@@ -1,31 +1,30 @@
-import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const ContactSection = () => {
   return (
     <>
       {/* Header Section */}
-      <section className="bg-blue-900 text-white py-16">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-red-500">Contact Us</h2>
+      <section className="py-16 text-white bg-blue-900">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold">Contact Us</h2>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="bg-orange-50 py-12 px-4">
-        <div className="container mx-auto flex flex-col md:flex-row items-stretch justify-center space-y-8 md:space-y-0 md:space-x-8">
+      <section className="px-4 py-12 bg-orange-50">
+        <div className="container flex flex-col items-stretch justify-center mx-auto space-y-8 md:flex-row md:space-y-0 md:space-x-8">
           {/* Form Area */}
-          <div className="w-full md:w-1/2 bg-white rounded shadow-lg p-8 flex flex-col">
+          <div className="flex flex-col w-full p-8 bg-white rounded shadow-lg md:w-1/2">
             <div className="text-center">
-              <h3 className="text-orange-500 text-xl font-bold mb-2">
+              <h3 className="mb-2 text-xl font-bold text-orange-500">
                 \ Get In Touch \
               </h3>
-              <h1 className="text-3xl font-bold text-blue-900 mb-6">
-                Hey! Let's Talk
+              <h1 className="mb-6 text-3xl font-bold text-blue-900">
+                {`Hey! Let's Talk`}
               </h1>
             </div>
-            
-            <form className="space-y-4 flex-grow">
+
+            <form className="flex-grow space-y-4">
               <input
                 type="text"
                 placeholder="Name"
@@ -47,7 +46,7 @@ const ContactSection = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700"
+                className="w-full py-3 text-white bg-blue-600 rounded hover:bg-blue-700"
               >
                 Send Now
               </button>
@@ -55,25 +54,25 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="w-full md:w-1/3 bg-white rounded shadow-lg p-8 flex flex-col justify-between">
+          <div className="flex flex-col justify-between w-full p-8 bg-white rounded shadow-lg md:w-1/3">
             <div>
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-blue-900 flex items-center mb-2">
-                  <i className="fas fa-phone-alt text-blue-500 mr-3"></i> Call
+                <h3 className="flex items-center mb-2 text-lg font-semibold text-blue-900">
+                  <i className="mr-3 text-blue-500 fas fa-phone-alt"></i> Call
                   Anytime
                 </h3>
                 <p className="text-gray-600">+62 858 1942 2449</p>
               </div>
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-blue-900 flex items-center mb-2">
-                  <i className="fas fa-envelope text-blue-500 mr-3"></i> Send
+                <h3 className="flex items-center mb-2 text-lg font-semibold text-blue-900">
+                  <i className="mr-3 text-blue-500 fas fa-envelope"></i> Send
                   Email
                 </h3>
                 <p className="text-gray-600">fahrulmonetaparessa@gmail.com</p>
               </div>
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-blue-900 flex items-center mb-2">
-                  <i className="fas fa-map-marker-alt text-blue-500 mr-3"></i>{" "}
+                <h3 className="flex items-center mb-2 text-lg font-semibold text-blue-900">
+                  <i className="mr-3 text-blue-500 fas fa-map-marker-alt"></i>{" "}
                   Visit Us
                 </h3>
                 <p className="text-gray-600">
@@ -84,20 +83,32 @@ const ContactSection = () => {
 
             {/* Social Media Icons */}
             <div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-4">
+              <h3 className="mb-4 text-lg font-semibold text-blue-900">
                 Follow us
               </h3>
               <div className="flex space-x-4">
-                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                <a
+                  href="#"
+                  className="flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full"
+                >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                <a
+                  href="#"
+                  className="flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full"
+                >
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                <a
+                  href="#"
+                  className="flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full"
+                >
                   <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" className="bg-blue-500 text-white p-3 rounded-full">
+                <a
+                  href="#"
+                  className="flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full"
+                >
                   <i className="fab fa-twitter"></i>
                 </a>
               </div>
