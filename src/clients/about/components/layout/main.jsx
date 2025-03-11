@@ -1,6 +1,7 @@
 import React from "react";
 import NewsLetter from "../../../../common/email";
 import CEO from "../../../../common/assets/images/team/CEO.jpg";
+import CTO from "../../../../common/assets/images/team/CTO.jpg";
 
 const teamMembers = [
   {
@@ -16,28 +17,33 @@ const teamMembers = [
     imgSrc:
       "https://th.bing.com/th/id/OIP.NfNA47Z2MfhgX6RWIUtqKgHaHa?rs=1&pid=ImgDetMain",
   },
+  {
+    id: 3,
+    name: "Ananta Firdaus",
+    role: "Technology Manager",
+    imgSrc: CTO,
+  },
 ];
 
 const OurTeam = () => {
   return (
-    <section id="our-team" className="bg-white py-32">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-primary">
+    <section id="our-team" className="py-32 bg-white">
+      <div className="container px-4 mx-auto">
+        <h2 className="mb-8 text-3xl font-bold text-center text-blue-900">
           Meet Our Team
         </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
+        <div className="grid items-center justify-center grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:px-28">
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-white rounded-lg shadow-md p-6 my-6 text-center"
+              className="p-6 my-6 text-center bg-white rounded-lg shadow-xl"
             >
               <img
                 src={member.imgSrc}
                 alt={`Team Member ${member.id}`}
-                className="w-full rounded-full mb-4"
+                className="w-full mb-4 rounded-full"
               />
-              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+              <h3 className="mb-2 text-xl font-semibold">{member.name}</h3>
               <p className="text-gray-700">{member.role}</p>
             </div>
           ))}
@@ -50,14 +56,17 @@ const OurTeam = () => {
 export default function HomeHero() {
   return (
     <React.Fragment>
-      <div className="container px-6 py-16 mx-auto text-justify">
-        <div className="w-full mx-auto overflow-hidden bg-blue-700 p-5 rounded-xl">
-          <h1 className="text-xl font-normal text-white lg:text-2xl">
+      <div className="container px-6 py-16 mx-auto ">
+        <div className="w-full p-5 mx-auto overflow-hidden rounded-xl">
+          <h1 className="pb-5 text-2xl font-bold text-center text-blue-900 lg:text-3xl">
+            PT. Fahrul Monetta Paresa
+          </h1>
+          <p className="text-justify sm:text-center xl:px-20">
             PT. Fahrul Monetta Paresa is at the forefront of the IT consulting
             and business development industry in Indonesia. Driven by a passion
             to create transformational solutions, we have empowered businesses
             across various sectors to thrive in the digital age.
-          </h1>
+          </p>
         </div>
 
         <div className="flex justify-center mt-10">
@@ -68,7 +77,7 @@ export default function HomeHero() {
         </div>
 
         {/* Card About */}
-        <div className="grid gap-8 md:grid-cols-2 lg:gap-12 p-6 md:p-10 mt-12">
+        <div className="grid gap-8 p-6 mt-12 md:grid-cols-2 lg:gap-12 md:p-10">
           <a
             href="#"
             className="flex flex-col p-6 space-y-6 transition-all duration-500 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6"
@@ -91,7 +100,7 @@ export default function HomeHero() {
             </div>
             <div className="flex-1">
               <h5 className="mb-3 text-xl font-bold lg:text-2xl">Our Vision</h5>
-              <p className="mb-6 text-lg text-gray-600">
+              <p className="mb-6 text-lg text-justify text-gray-600">
                 To become the leading partner in digital transformation and
                 business development for companies both in Indonesia and
                 globally, while creating sustainable value through technological
@@ -120,10 +129,8 @@ export default function HomeHero() {
               </svg>
             </div>
             <div className="flex-1">
-              <h5 className="mb-3 text-xl font-bold lg:text-2xl">
-                Our Mission
-              </h5>
-              <ul className="mb-6 text-lg text-gray-600 list-disc">
+              <h5 className="text-xl font-bold lg:text-2xl">Our Mission</h5>
+              <ul className="px-5 text-lg text-gray-600 list-disc">
                 <li>Empowering Business Growth</li>
                 <li>Delivering World-Class Solutions</li>
                 <li>Creating Significant Added Value</li>
